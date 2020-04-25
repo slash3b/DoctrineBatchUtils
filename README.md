@@ -13,7 +13,7 @@ This repository is maintained by [Patrick Reimers (PReimers)](https://github.com
 
 ## Installation
 
-Supported installation method is via [Composer](http://getcomposer.org/):
+Supported installation method is via [Composer](https://getcomposer.org/):
 
 ```sh
 composer require ocramius/doctrine-batch-utils
@@ -22,7 +22,7 @@ composer require ocramius/doctrine-batch-utils
 ## Current features
 
 As it stands, the only implemented utility in this repository is an 
-[`IteratorAggregate`](http://php.net/manual/en/class.iteratoraggregate.php) that 
+[`IteratorAggregate`](https://www.php.net/manual/en/class.iteratoraggregate.php) that
 wraps around a DB transaction and calls 
 [`ObjectManager#flush()`](https://github.com/doctrine/common/blob/v2.5.1/lib/Doctrine/Common/Persistence/ObjectManager.php#L120)
 and [`ObjectManager#clear()`](https://github.com/doctrine/common/blob/v2.5.1/lib/Doctrine/Common/Persistence/ObjectManager.php#L88)
@@ -53,7 +53,7 @@ foreach ($iterable as $record) {
 ##### `$record` freshness
 
 Please note that the `$record` inside the loop will always be "fresh" 
-([`managed`](http://doctrine-orm.readthedocs.org/projects/doctrine-orm/en/latest/reference/working-with-objects.html#persisting-entities) state),
+([`managed`](https://www.doctrine-project.org/projects/doctrine-orm/en/2.7/reference/working-with-objects.html#persisting-entities) state),
 as the iterator re-fetches it on its own: this prevents you from having to
 manually call [`ObjectManager#find()`](https://github.com/doctrine/common/blob/v2.5.1/lib/Doctrine/Common/Persistence/ObjectManager.php#L42)
 on your own for every iteration.
